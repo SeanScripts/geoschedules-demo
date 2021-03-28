@@ -1,0 +1,42 @@
+<% var title = 'Supervisor page' %>
+<% include head %>
+
+<p>Logged in as <%- first_name %> <%- last_name %> (<%- email_address %>).  <a href="/logout">Logout</a></p>
+
+<div id="message"></div>
+
+<h1>Employee shifts</h1>
+<table id="shifts" border="1">
+	<tr>
+		<td>Employee</td>
+		<td>Email</td>
+		<td>Site</td>
+		<td>Date</td>
+		<td>Time</td>
+		<td>Location</td>
+	</tr>
+</table>
+
+<h1>Map</h1>
+<p>Address: <span id="address">Not selected</span></p>
+<div id="map" class="map"></div>
+
+<h1>Checkins/Checkouts</h1>
+<table id="checkins" border="1">
+	<tr>
+		<td>Employee</td>
+		<td>Email</td>
+		<td>Site</td>
+		<td>Date</td>
+		<td>Checkin time</td>
+		<td>Checkout time</td>
+		<td>Locations</td>
+		<td>Duration (s)</td>
+		<td>Checkin distance (km)</td>
+		<td>Checkout distance (km)</td>
+	</tr>
+</table>
+
+<script src="javascripts/supervisorscript.js" type="text/javascript"></script>
+
+<% include foot %>
